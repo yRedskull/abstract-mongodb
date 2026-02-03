@@ -1,4 +1,4 @@
-module github.com/yRedskull/abstract-mongodb
+module github.com/yredskull/abstract-mongodb
 
 go 1.25.6
 
