@@ -4,7 +4,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -94,11 +93,4 @@ func EnsureIndex(ctx context.Context, collection string, indexModel mongo.IndexM
 	}
 
 	return nil
-}
-
-func ContextWithTimeout(parent context.Context, duration time.Duration) (context.Context) {
-	ctx, cancel := context.WithTimeout(parent, duration)
-	defer cancel()
-
-	return ctx
 }
